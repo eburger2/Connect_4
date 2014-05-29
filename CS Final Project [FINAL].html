@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='style.css'/>
+	<script>
+	function oneplayer()
+		{document.getElementById("playone").innerHTML = 0;
+		document.getElementById("oneplayer").style.visibility = 'hidden';
+		document.getElementById("twoplayer").style.visibility = 'hidden';
+		}
+	function twoplayer()
+		{
+		document.getElementById("playone").innerHTML = 1;
+		document.getElementById("oneplayer").style.visibility = 'hidden';
+		document.getElementById("twoplayer").style.visibility = 'hidden';
+		}
+	function column1()
+	{
+if (document.getElementById("playone").innerHTML <2)
+{
+	var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+	{
+	start();
+	document.getElementById("counter").innerHTML ++;
+	}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixone").innerHTML =="")
+			{
+			document.getElementById("sixone").innerHTML = "X";
+			document.getElementById("sixone").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fiveone").innerHTML == "")
+			{
+			document.getElementById("fiveone").innerHTML = "X";
+			document.getElementById("fiveone").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fourone").innerHTML == "")
+			{
+			document.getElementById("fourone").innerHTML = "X";
+			document.getElementById("fourone").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threeone").innerHTML == "")
+			{
+			document.getElementById("threeone").innerHTML = "X";
+			document.getElementById("threeone").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twoone").innerHTML == "")
+			{
+			document.getElementById("twoone").innerHTML = "X";
+			document.getElementById("twoone").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("oneone").innerHTML == "")
+			{
+			document.getElementById("oneone").innerHTML = "X";
+			document.getElementById("oneone").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixone").innerHTML =="")
+			{
+			document.getElementById("sixone").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fiveone").innerHTML == "")
+			{
+			document.getElementById("fiveone").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fourone").innerHTML == "")
+			{
+			document.getElementById("fourone").innerHTML = "O";
+			owin();
+			draw();
+			switchplayer();
+			}
+		else if(document.getElementById("threeone").innerHTML == "")
+			{
+			document.getElementById("threeone").innerHTML = "O";
+			owin();
+			draw();
+			switchplayer();
+			}
+		else if(document.getElementById("twoone").innerHTML == "")
+			{
+			document.getElementById("twoone").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("oneone").innerHTML == "")
+			{
+			document.getElementById("oneone").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else 
+			{
+			AI();
+			}
+	}
+}
+draw();
+}
+	function column2()
+{if (document.getElementById("playone").innerHTML <2)
+	{var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+	{
+	start();
+	document.getElementById("counter").innerHTML = 1;
+	}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixtwo").innerHTML =="")
+			{
+			document.getElementById("sixtwo").innerHTML = "X";
+			document.getElementById("sixtwo").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fivetwo").innerHTML == "")
+			{
+			document.getElementById("fivetwo").innerHTML = "X";
+			document.getElementById("fivetwo").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fourtwo").innerHTML == "")
+			{
+			document.getElementById("fourtwo").innerHTML = "X";
+			document.getElementById("fourtwo").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threetwo").innerHTML == "")
+			{
+			document.getElementById("threetwo").innerHTML = "X";
+			document.getElementById("threetwo").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twotwo").innerHTML == "")
+			{
+			document.getElementById("twotwo").innerHTML = "X";
+			document.getElementById("twotwo").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("onetwo").innerHTML == "")
+			{
+			document.getElementById("onetwo").innerHTML = "X";
+			document.getElementById("onetwo").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixtwo").innerHTML =="")
+			{
+			document.getElementById("sixtwo").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fivetwo").innerHTML == "")
+			{
+			document.getElementById("fivetwo").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fourtwo").innerHTML == "")
+			{
+			document.getElementById("fourtwo").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("threetwo").innerHTML == "")
+			{
+			document.getElementById("threetwo").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("twotwo").innerHTML == "")
+			{
+			document.getElementById("twotwo").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("onetwo").innerHTML == "")
+			{
+			document.getElementById("onetwo").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else 
+			{
+			AI();
+			}
+		}
+	}
+draw();
+}
+	function column3()
+	{
+if (document.getElementById("playone").innerHTML <2)
+{
+	var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+		{
+		start();
+		document.getElementById("counter").innerHTML = 1;
+		}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixthree").innerHTML =="")
+			{
+			document.getElementById("sixthree").innerHTML = "X";
+			document.getElementById("sixthree").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fivethree").innerHTML == "")
+			{
+			document.getElementById("fivethree").innerHTML = "X";
+			document.getElementById("fivethree").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fourthree").innerHTML == "")
+			{
+			document.getElementById("fourthree").innerHTML = "X";
+			document.getElementById("fourthree").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threethree").innerHTML == "")
+			{
+			document.getElementById("threethree").innerHTML = "X";
+			document.getElementById("threethree").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twothree").innerHTML == "")
+			{
+			document.getElementById("twothree").innerHTML = "X";
+			document.getElementById("twothree").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("onethree").innerHTML == "")
+			{
+			document.getElementById("onethree").innerHTML = "X";
+			document.getElementById("onethree").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixthree").innerHTML =="")
+			{
+			document.getElementById("sixthree").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fivethree").innerHTML == "")
+			{
+			document.getElementById("fivethree").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fourthree").innerHTML == "")
+			{
+			document.getElementById("fourthree").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("threethree").innerHTML == "")
+			{
+			document.getElementById("threethree").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("twothree").innerHTML == "")
+			{
+			document.getElementById("twothree").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("onethree").innerHTML == "")
+			{
+			document.getElementById("onethree").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else
+			{
+			AI();
+			}
+		}
+	}
+draw();
+}
+	function column4()
+		{
+		if (document.getElementById("playone").innerHTML <2)
+{		
+		var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+		{
+		start();
+		document.getElementById("counter").innerHTML = 1;
+		}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixfour").innerHTML =="")
+			{
+			document.getElementById("sixfour").innerHTML = "X";
+			document.getElementById("sixfour").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fivefour").innerHTML == "")
+			{
+			document.getElementById("fivefour").innerHTML = "X";
+			document.getElementById("fivefour").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fourfour").innerHTML == "")
+			{
+			document.getElementById("fourfour").innerHTML = "X";
+			document.getElementById("fourfour").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threefour").innerHTML == "")
+			{
+			document.getElementById("threefour").innerHTML = "X";
+			document.getElementById("threefour").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twofour").innerHTML == "")
+			{
+			document.getElementById("twofour").innerHTML = "X";
+			document.getElementById("twofour").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("onefour").innerHTML == "")
+			{
+			document.getElementById("onefour").innerHTML = "X";
+			document.getElementById("onefour").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixfour").innerHTML =="")
+			{
+			document.getElementById("sixfour").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fivefour").innerHTML == "")
+			{
+			document.getElementById("fivefour").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fourfour").innerHTML == "")
+			{
+			document.getElementById("fourfour").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("threefour").innerHTML == "")
+			{
+			document.getElementById("threefour").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("twofour").innerHTML == "")
+			{
+			document.getElementById("twofour").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("onefour").innerHTML == "")
+			{
+			document.getElementById("onefour").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else
+			{
+			AI();
+			}
+		}
+	}
+draw();
+}
+	function column5()
+		{if (document.getElementById("playone").innerHTML <2)
+{		
+		var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+		{
+		start();
+		document.getElementById("counter").innerHTML = 1;
+		}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixfive").innerHTML =="")
+			{
+			document.getElementById("sixfive").innerHTML = "X";
+			document.getElementById("sixfive").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fivefive").innerHTML == "")
+			{
+			document.getElementById("fivefive").innerHTML = "X";
+			document.getElementById("fivefive").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fourfive").innerHTML == "")
+			{
+			document.getElementById("fourfive").innerHTML = "X";
+			document.getElementById("fourfive").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threefive").innerHTML == "")
+			{
+			document.getElementById("threefive").innerHTML = "X";
+			document.getElementById("threefive").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twofive").innerHTML == "")
+			{
+			document.getElementById("twofive").innerHTML = "X";
+			document.getElementById("twofive").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("onefive").innerHTML == "")
+			{
+			document.getElementById("onefive").innerHTML = "X";
+			document.getElementById("onefive").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixfive").innerHTML =="")
+			{
+			document.getElementById("sixfive").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fivefive").innerHTML == "")
+			{
+			document.getElementById("fivefive").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fourfive").innerHTML == "")
+			{
+			document.getElementById("fourfive").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("threefive").innerHTML == "")
+			{
+			document.getElementById("threefive").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("twofive").innerHTML == "")
+			{
+			document.getElementById("twofive").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("onefive").innerHTML == "")
+			{
+			document.getElementById("onefive").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else
+			{
+			AI();
+			}
+		}
+	}
+draw();
+}
+	function column6()
+{
+if (document.getElementById("playone").innerHTML <2)
+{
+	var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+	{
+	start();
+	document.getElementById("counter").innerHTML ++;
+	}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixsix").innerHTML =="")
+			{
+			document.getElementById("sixsix").innerHTML = "X";
+			document.getElementById("sixsix").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fivesix").innerHTML == "")
+			{
+			document.getElementById("fivesix").innerHTML = "X";
+			document.getElementById("fivesix").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("foursix").innerHTML == "")
+			{
+			document.getElementById("foursix").innerHTML = "X";
+			document.getElementById("foursix").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threesix").innerHTML == "")
+			{
+			document.getElementById("threesix").innerHTML = "X";
+			document.getElementById("threesix").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twosix").innerHTML == "")
+			{
+			document.getElementById("twosix").innerHTML = "X";
+			document.getElementById("twosix").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("onesix").innerHTML == "")
+			{
+			document.getElementById("onesix").innerHTML = "X";
+			document.getElementById("onesix").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixsix").innerHTML =="")
+			{
+			document.getElementById("sixsix").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fivesix").innerHTML == "")
+			{
+			document.getElementById("fivesix").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("foursix").innerHTML == "")
+			{
+			document.getElementById("foursix").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("threesix").innerHTML == "")
+			{
+			document.getElementById("threesix").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("twosix").innerHTML == "")
+			{
+			document.getElementById("twosix").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("onesix").innerHTML == "")
+			{
+			document.getElementById("onesix").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else 
+			{
+			AI();
+			}
+		}
+	}
+draw();
+}
+	function column7()
+{
+if (document.getElementById("playone").innerHTML <2)
+{
+var a = document.getElementById("counter").innerHTML;
+	if (a < 1)
+	{
+	start();
+	document.getElementById("counter").innerHTML ++;
+	}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		if (document.getElementById("sixseven").innerHTML =="")
+			{
+			document.getElementById("sixseven").innerHTML = "X";
+			document.getElementById("sixseven").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fiveseven").innerHTML == "")
+			{
+			document.getElementById("fiveseven").innerHTML = "X";
+			document.getElementById("fiveseven").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("fourseven").innerHTML == "")
+			{
+			document.getElementById("fourseven").innerHTML = "X";
+			document.getElementById("fourseven").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("threeseven").innerHTML == "")
+			{
+			document.getElementById("threeseven").innerHTML = "X";
+			document.getElementById("threeseven").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("twoseven").innerHTML == "")
+			{
+			document.getElementById("twoseven").innerHTML = "X";
+			document.getElementById("twoseven").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+		else if(document.getElementById("oneseven").innerHTML == "")
+			{
+			document.getElementById("oneseven").innerHTML = "X";
+			document.getElementById("oneseven").style.color = "red";
+			xwin();
+			switchplayer();
+			AI();
+			}
+	}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		if (document.getElementById("sixseven").innerHTML =="")
+			{
+			document.getElementById("sixseven").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fiveseven").innerHTML == "")
+			{
+			document.getElementById("fiveseven").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("fourseven").innerHTML == "")
+			{
+			document.getElementById("fourseven").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("threeseven").innerHTML == "")
+			{
+			document.getElementById("threeseven").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("twoseven").innerHTML == "")
+			{
+			document.getElementById("twoseven").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else if(document.getElementById("oneseven").innerHTML == "")
+			{
+			document.getElementById("oneseven").innerHTML = "O";
+			owin();
+			switchplayer();
+			}
+		else
+			{
+			AI();
+			}
+		}		
+}
+draw();
+}
+	function start()
+		{
+		document.getElementById("sixone").innerHTML ="";
+		document.getElementById("fiveone").innerHTML ="";
+		document.getElementById("fourone").innerHTML ="";
+		document.getElementById("threeone").innerHTML ="";
+		document.getElementById("twoone").innerHTML ="";
+		document.getElementById("oneone").innerHTML ="";
+		document.getElementById("sixtwo").innerHTML ="";
+		document.getElementById("fivetwo").innerHTML ="";
+		document.getElementById("fourtwo").innerHTML ="";
+		document.getElementById("threetwo").innerHTML ="";
+		document.getElementById("twotwo").innerHTML ="";
+		document.getElementById("onetwo").innerHTML ="";
+		document.getElementById("sixthree").innerHTML ="";
+		document.getElementById("fivethree").innerHTML ="";
+		document.getElementById("fourthree").innerHTML ="";
+		document.getElementById("threethree").innerHTML ="";
+		document.getElementById("twothree").innerHTML ="";
+		document.getElementById("onethree").innerHTML ="";
+		document.getElementById("sixfour").innerHTML ="";
+		document.getElementById("fivefour").innerHTML ="";
+		document.getElementById("fourfour").innerHTML ="";
+		document.getElementById("threefour").innerHTML ="";
+		document.getElementById("twofour").innerHTML ="";
+		document.getElementById("onefour").innerHTML ="";
+		document.getElementById("sixfive").innerHTML ="";
+		document.getElementById("fivefive").innerHTML ="";
+		document.getElementById("fourfive").innerHTML ="";
+		document.getElementById("threefive").innerHTML ="";
+		document.getElementById("twofive").innerHTML ="";
+		document.getElementById("onefive").innerHTML ="";
+		document.getElementById("sixsix").innerHTML ="";
+		document.getElementById("fivesix").innerHTML ="";
+		document.getElementById("foursix").innerHTML ="";
+		document.getElementById("threesix").innerHTML ="";
+		document.getElementById("twosix").innerHTML ="";
+		document.getElementById("onesix").innerHTML ="";
+		document.getElementById("sixseven").innerHTML ="";
+		document.getElementById("fiveseven").innerHTML ="";
+		document.getElementById("fourseven").innerHTML ="";
+		document.getElementById("threeseven").innerHTML ="";
+		document.getElementById("twoseven").innerHTML ="";
+		document.getElementById("oneseven").innerHTML ="";
+		
+		
+		document.getElementById("sixone").style.color="black";
+		document.getElementById("fiveone").style.color="black";
+		document.getElementById("fourone").style.color="black";
+		document.getElementById("threeone").style.color="black";
+		document.getElementById("twoone").style.color="black";
+		document.getElementById("oneone").style.color="black";
+		document.getElementById("sixtwo").style.color="black";
+		document.getElementById("fivetwo").style.color="black";
+		document.getElementById("fourtwo").style.color="black";
+		document.getElementById("threetwo").style.color="black";
+		document.getElementById("twotwo").style.color="black";
+		document.getElementById("onetwo").style.color="black";
+		document.getElementById("sixthree").style.color="black";
+		document.getElementById("fivethree").style.color="black";
+		document.getElementById("fourthree").style.color="black";
+		document.getElementById("threethree").style.color="black";
+		document.getElementById("twothree").style.color="black";
+		document.getElementById("onethree").style.color="black";
+		document.getElementById("sixfour").style.color="black";
+		document.getElementById("fivefour").style.color="black";
+		document.getElementById("fourfour").style.color="black";
+		document.getElementById("threefour").style.color="black";
+		document.getElementById("twofour").style.color="black";
+		document.getElementById("onefour").style.color="black";
+		document.getElementById("sixfive").style.color="black";
+		document.getElementById("fivefive").style.color="black";
+		document.getElementById("fourfive").style.color="black";
+		document.getElementById("threefive").style.color="black";
+		document.getElementById("twofive").style.color="black";
+		document.getElementById("onefive").style.color="black";
+		document.getElementById("sixsix").style.color="black";
+		document.getElementById("fivesix").style.color="black";
+		document.getElementById("foursix").style.color="black";
+		document.getElementById("threesix").style.color="black";
+		document.getElementById("twosix").style.color="black";
+		document.getElementById("onesix").style.color="black";
+		document.getElementById("sixseven").style.color="black";
+		document.getElementById("fiveseven").style.color="black";
+		document.getElementById("fourseven").style.color="black";
+		document.getElementById("threeseven").style.color="black";
+		document.getElementById("twoseven").style.color="black";
+		document.getElementById("oneseven").style.color="black";
+
+
+
+
+		
+		}
+	function reset()
+	{
+	start();
+	document.getElementById("counter").innerHTML=0;
+	document.getElementById("currentplayer").innerHTML="Current Player: 1";
+	document.getElementById("currentplayer").style.color = "black";
+	document.getElementById("oneplayer").innerHTML = 0;
+	document.getElementById("oneplayer").style.visibility = 'visible';
+	document.getElementById("twoplayer").style.visibility = 'visible';
+	document.getElementById("playone").innerHTML = 2;
+
+	}
+	function switchplayer()
+	{
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 1")
+		{
+		document.getElementById("currentplayer").innerHTML = "Current Player: 2";
+		}
+	else if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		document.getElementById("currentplayer").innerHTML = "Current Player: 1";
+		}
+	}
+function xwin() //checks to see if X wins. Colors the winning 4 blue and changes Current player to "Player 1 Wins"
+	{
+	var row1 = [document.getElementById("oneone").innerHTML, document.getElementById("onetwo").innerHTML, document.getElementById("onethree").innerHTML, document.getElementById("onefour").innerHTML, document.getElementById("onefive").innerHTML, document.getElementById("onesix").innerHTML, document.getElementById("oneseven").innerHTML];
+	var row2 = [document.getElementById("twoone").innerHTML, document.getElementById("twotwo").innerHTML, document.getElementById("twothree").innerHTML, document.getElementById("twofour").innerHTML, document.getElementById("twofive").innerHTML, document.getElementById("twosix").innerHTML, document.getElementById("twoseven").innerHTML];
+	var row3 = [document.getElementById("threeone").innerHTML, document.getElementById("threetwo").innerHTML, document.getElementById("threethree").innerHTML, document.getElementById("threefour").innerHTML, document.getElementById("threefive").innerHTML, document.getElementById("threesix").innerHTML, document.getElementById("threeseven").innerHTML];
+	var row4 =[document.getElementById("fourone").innerHTML, document.getElementById("fourtwo").innerHTML, document.getElementById("fourthree").innerHTML, document.getElementById("fourfour").innerHTML, document.getElementById("fourfive").innerHTML, document.getElementById("foursix").innerHTML, document.getElementById("fourseven").innerHTML];
+	var row5 =[document.getElementById("fiveone").innerHTML, document.getElementById("fivetwo").innerHTML, document.getElementById("fivethree").innerHTML, document.getElementById("fivefour").innerHTML, document.getElementById("fivefive").innerHTML, document.getElementById("fivesix").innerHTML, document.getElementById("fiveseven").innerHTML];
+	var row6 =[document.getElementById("sixone").innerHTML, document.getElementById("sixtwo").innerHTML, document.getElementById("sixthree").innerHTML, document.getElementById("sixfour").innerHTML, document.getElementById("sixfive").innerHTML, document.getElementById("sixsix").innerHTML, document.getElementById("sixseven").innerHTML];
+	var col1 = [document.getElementById("oneone").innerHTML, document.getElementById("twoone").innerHTML, document.getElementById("threeone").innerHTML, document.getElementById("fourone").innerHTML, document.getElementById("fiveone").innerHTML, document.getElementById("sixone").innerHTML];
+	var col2 = [document.getElementById("onetwo").innerHTML, document.getElementById("twotwo").innerHTML, document.getElementById("threetwo").innerHTML, document.getElementById("fourtwo").innerHTML, document.getElementById("fivetwo").innerHTML, document.getElementById("sixtwo").innerHTML];
+	var col3 = [document.getElementById("onethree").innerHTML, document.getElementById("twothree").innerHTML, document.getElementById("threethree").innerHTML, document.getElementById("fourthree").innerHTML, document.getElementById("fivethree").innerHTML, document.getElementById("sixthree").innerHTML];
+	var col4 =[document.getElementById("onefour").innerHTML, document.getElementById("twofour").innerHTML, document.getElementById("threefour").innerHTML, document.getElementById("fourfour").innerHTML, document.getElementById("fivefour").innerHTML, document.getElementById("sixfour").innerHTML];
+	var col5 =[document.getElementById("onefive").innerHTML, document.getElementById("twofive").innerHTML, document.getElementById("threefive").innerHTML, document.getElementById("fourfive").innerHTML, document.getElementById("fivefive").innerHTML, document.getElementById("sixfive").innerHTML];
+	var col6 =[document.getElementById("onesix").innerHTML, document.getElementById("twosix").innerHTML, document.getElementById("threesix").innerHTML, document.getElementById("foursix").innerHTML, document.getElementById("fivesix").innerHTML, document.getElementById("sixsix").innerHTML];
+	var col7 =[document.getElementById("oneseven").innerHTML, document.getElementById("twoseven").innerHTML, document.getElementById("threeseven").innerHTML, document.getElementById("fourseven").innerHTML, document.getElementById("fiveseven").innerHTML, document.getElementById("sixseven").innerHTML];
+	var rows = [row6, row5, row4, row3, row2, row1];
+	var columns = [col1, col2, col3, col4, col5, col6, col7]; //array representing col1, col2, etc. Helps 
+	var Column1 = ["oneone", "twoone", "threeone", "fourone", "fiveone", "sixone"];
+	var Column2 = ["onetwo", "twotwo", "threetwo", "fourtwo", "fivetwo", "sixtwo"];
+	var Column3 = ["onethree", "twothree", "threethree", "fourthree", "fivethree", "sixthree"];
+	var Column4 = ["onefour", "twofour", "threefour", "fourfour", "fivefour", "sixfour"];
+	var Column5 = ["onefive", "twofive", "threefive", "fourfive", "fivefive", "sixfive"];
+	var Column6 = ["onesix", "twosix", "threesix", "foursix", "fivesix", "sixsix"];
+	var Column7 = ["oneseven","twoseven","threeseven","fourseven","fiveseven","sixseven"];
+	var Columns2 = [Column1, Column2, Column3, Column4, Column5, Column6, Column7];
+	var Row1 = ["oneone", "onetwo", "onethree", "onefour", "onefive", "onesix", "oneseven"];
+	var Row2 = ["twoone", "twotwo", "twothree", "twofour", "twofive", "twosix", "twoseven"];
+	var Row3 = ["threeone", "threetwo", "threethree", "threefour", "threefive", "threesix", "threeseven"];
+	var Row4 = ["fourone", "fourtwo", "fourthree", "fourfour", "fourfive", "foursix", "fourseven"];
+	var Row5 = ["fiveone", "fivetwo", "fivethree", "fivefour", "fivefive", "fivesix", "fiveseven"];
+	var Row6 = ["sixone", "sixtwo", "sixthree", "sixfour", "sixfive", "sixsix", "sixseven"];
+	var rows2= [Row6, Row5, Row4, Row3, Row2, Row1];
+	
+	for (var b = 0; b<6; b++)
+	{
+		var m = rows[b];
+		var n = rows2[b];
+	
+		for (var i = 6; i>0; i--) //goes through each column, starting with column 1 (far left), represented as columns[0].
+		{
+			if (m[i] == m[i-1] && m[i] == m[i-2] && m[i] == m[i-3] && m[i] == "X")
+				{
+				document.getElementById(n[i]).style.color = "blue";
+				document.getElementById(n[i-1]).style.color = "blue";
+				document.getElementById(n[i-2]).style.color = "blue";
+				document.getElementById(n[i-3]).style.color = "blue";
+				document.getElementById("currentplayer").innerHTML = "Player 1 Wins!";
+				document.getElementById("currentplayer").style.color = "blue";
+				}	
+		}
+	}			//still need to program diagonals
+	for (var i1 = 0; i1<7; i1++) //goes through each column, starting with column 1 (far left), represented as columns[0].
+	{
+		var a = columns[i1];	
+		var v = Columns2[i1];
+		
+		for (var t = 5; t>0;t--)// checks each element in column [i].  If i is 0, checks each row in column 1.  P = 5 represents row 6 (the bottom row)
+		{						// and t = 0 represents the top row (row 1)
+		if (a[t] == a[t-1] && a[t] == a[t-2] && a[t] == a[t-3] && a[t-3] == "X")
+			{
+			document.getElementById(v[t]).style.color="blue";
+			document.getElementById(v[t-1]).style.color="blue"; // for some reason isn't changing these to blue?
+			document.getElementById(v[t-2]).style.color="blue";
+			document.getElementById(v[t-3]).style.color="blue";
+			document.getElementById("currentplayer").style.color="blue";
+			document.getElementById("currentplayer").innerHTML="Player 1 Wins!";
+			}
+		}
+	}
+	for (var i2 = 5; i2>2; i2--)
+	{
+		var e = rows[i2];
+		var e1 = rows[i2-1];
+		var e2 = rows[i2-2];
+		var e3 = rows[i2-3];
+		var r = rows2[i2];
+		var r1 = rows2[i2-1];
+		var r2 = rows2[i2-2];
+		var r3 = rows2[i2-3];
+		
+		for ( var j = 6; j>0; j--)
+			{
+			if (e[j] == e1[j-1] && e[j] == e2[j-2] && e[j] == e3[j-3] && e[j] == "X") //cannot read property '3' of undefined?
+				{
+				document.getElementById(r[j]).style.color = "blue";
+				document.getElementById(r1[j-1]).style.color = "blue";
+				document.getElementById(r2[j-2]).style.color = "blue";
+				document.getElementById(r3[j-3]).style.color = "blue";
+				document.getElementById("currentplayer").style.color = "blue";
+				document.getElementById("currentplayer").innerHTML = "Player 1 Wins!";
+				}
+			if (e[j-3] == e1[j-2] && e[j-3] == e2[j-1] && e[j-3] == e3[j] && e3[j] == "X")
+				{
+				document.getElementById(r[j-3]).style.color = "blue";
+				document.getElementById(r1[j-2]).style.color = "blue";
+				document.getElementById(r2[j-1]).style.color = "blue";
+				document.getElementById(r3[j]).style.color = "blue";
+				document.getElementById("currentplayer").style.color = "blue";
+				document.getElementById("currentplayer").innerHTML = "Player 1 Wins!";
+				
+				}
+			}
+	}
+}
+function owin()//Same as function xwins, but with O
+	{	var row1 = [document.getElementById("oneone").innerHTML, document.getElementById("onetwo").innerHTML, document.getElementById("onethree").innerHTML, document.getElementById("onefour").innerHTML, document.getElementById("onefive").innerHTML, document.getElementById("onesix").innerHTML, document.getElementById("oneseven").innerHTML];
+	var row2 = [document.getElementById("twoone").innerHTML, document.getElementById("twotwo").innerHTML, document.getElementById("twothree").innerHTML, document.getElementById("twofour").innerHTML, document.getElementById("twofive").innerHTML, document.getElementById("twosix").innerHTML, document.getElementById("twoseven").innerHTML];
+	var row3 = [document.getElementById("threeone").innerHTML, document.getElementById("threetwo").innerHTML, document.getElementById("threethree").innerHTML, document.getElementById("threefour").innerHTML, document.getElementById("threefive").innerHTML, document.getElementById("threesix").innerHTML, document.getElementById("threeseven").innerHTML];
+	var row4 =[document.getElementById("fourone").innerHTML, document.getElementById("fourtwo").innerHTML, document.getElementById("fourthree").innerHTML, document.getElementById("fourfour").innerHTML, document.getElementById("fourfive").innerHTML, document.getElementById("foursix").innerHTML, document.getElementById("fourseven").innerHTML];
+	var row5 =[document.getElementById("fiveone").innerHTML, document.getElementById("fivetwo").innerHTML, document.getElementById("fivethree").innerHTML, document.getElementById("fivefour").innerHTML, document.getElementById("fivefive").innerHTML, document.getElementById("fivesix").innerHTML, document.getElementById("fiveseven").innerHTML];
+	var row6 =[document.getElementById("sixone").innerHTML, document.getElementById("sixtwo").innerHTML, document.getElementById("sixthree").innerHTML, document.getElementById("sixfour").innerHTML, document.getElementById("sixfive").innerHTML, document.getElementById("sixsix").innerHTML, document.getElementById("sixseven").innerHTML];
+	var col1 = [document.getElementById("oneone").innerHTML, document.getElementById("twoone").innerHTML, document.getElementById("threeone").innerHTML, document.getElementById("fourone").innerHTML, document.getElementById("fiveone").innerHTML, document.getElementById("sixone").innerHTML];
+	var col2 = [document.getElementById("onetwo").innerHTML, document.getElementById("twotwo").innerHTML, document.getElementById("threetwo").innerHTML, document.getElementById("fourtwo").innerHTML, document.getElementById("fivetwo").innerHTML, document.getElementById("sixtwo").innerHTML];
+	var col3 = [document.getElementById("onethree").innerHTML, document.getElementById("twothree").innerHTML, document.getElementById("threethree").innerHTML, document.getElementById("fourthree").innerHTML, document.getElementById("fivethree").innerHTML, document.getElementById("sixthree").innerHTML];
+	var col4 =[document.getElementById("onefour").innerHTML, document.getElementById("twofour").innerHTML, document.getElementById("threefour").innerHTML, document.getElementById("fourfour").innerHTML, document.getElementById("fivefour").innerHTML, document.getElementById("sixfour").innerHTML];
+	var col5 =[document.getElementById("onefive").innerHTML, document.getElementById("twofive").innerHTML, document.getElementById("threefive").innerHTML, document.getElementById("fourfive").innerHTML, document.getElementById("fivefive").innerHTML, document.getElementById("sixfive").innerHTML];
+	var col6 =[document.getElementById("onesix").innerHTML, document.getElementById("twosix").innerHTML, document.getElementById("threesix").innerHTML, document.getElementById("foursix").innerHTML, document.getElementById("fivesix").innerHTML, document.getElementById("sixsix").innerHTML];
+	var col7 =[document.getElementById("oneseven").innerHTML, document.getElementById("twoseven").innerHTML, document.getElementById("threeseven").innerHTML, document.getElementById("fourseven").innerHTML, document.getElementById("fiveseven").innerHTML, document.getElementById("sixseven").innerHTML];
+	var rows = [row6, row5, row4, row3, row2, row1];
+	var columns = [col1, col2, col3, col4, col5, col6, col7]; //array representing col1, col2, etc. Helps 
+	var Column1 = ["oneone", "twoone", "threeone", "fourone", "fiveone", "sixone"];
+	var Column2 = ["onetwo", "twotwo", "threetwo", "fourtwo", "fivetwo", "sixtwo"];
+	var Column3 = ["onethree", "twothree", "threethree", "fourthree", "fivethree", "sixthree"];
+	var Column4 = ["onefour", "twofour", "threefour", "fourfour", "fivefour", "sixfour"];
+	var Column5 = ["onefive", "twofive", "threefive", "fourfive", "fivefive", "sixfive"];
+	var Column6 = ["onesix", "twosix", "threesix", "foursix", "fivesix", "sixsix"];
+	var Column7 = ["oneseven","twoseven","threeseven","fourseven","fiveseven","sixseven"];
+	var Columns2 = [Column1, Column2, Column3, Column4, Column5, Column6, Column7];
+	var Row1 = ["oneone", "onetwo", "onethree", "onefour", "onefive", "onesix", "oneseven"];
+	var Row2 = ["twoone", "twotwo", "twothree", "twofour", "twofive", "twosix", "twoseven"];
+	var Row3 = ["threeone", "threetwo", "threethree", "threefour", "threefive", "threesix", "threeseven"];
+	var Row4 = ["fourone", "fourtwo", "fourthree", "fourfour", "fourfive", "foursix", "fourseven"];
+	var Row5 = ["fiveone", "fivetwo", "fivethree", "fivefour", "fivefive", "fivesix", "fiveseven"];
+	var Row6 = ["sixone", "sixtwo", "sixthree", "sixfour", "sixfive", "sixsix", "sixseven"];
+	var rows2= [Row6, Row5, Row4, Row3, Row2, Row1];
+	for (var i = 0; i<7; i++) //goes through each column, starting with column 1 (far left), represented as columns[0].
+	{
+		var a = columns[i];	
+		var b = Columns2[i];
+		
+		for (var p = 5; p>0;p--)// checks each element in column [i].  If i is 0, checks each row in column 1.  P = 5 represents row 6 (the bottom row)
+		{						// and P = 0 represents the top row (row 1)
+		if (a[p] == a[p-1] && a[p] == a[p-2] && a[p] == a[p-3] && a[p-3] == "O")
+			{
+			document.getElementById(b[p]).style.color="blue";
+			document.getElementById(b[p-1]).style.color="blue";
+			document.getElementById(b[p-2]).style.color="blue";
+			document.getElementById(b[p-3]).style.color="blue";
+			document.getElementById("currentplayer").style.color="blue"
+			document.getElementById("currentplayer").innerHTML="Player 2 Wins!";
+			}
+		
+		}
+	}
+	for (var i1 = 0; i1<6; i1++)
+	{
+		var c = rows[i1];
+		var d = rows2[i1];
+		
+		for (var p1 = 6; p1>0; p1--)
+			{
+			if (c[p1] == c[p1-1] && c[p1] == c[p1-2] && c[p1] == c[p1-3] && c[p1] == "O")
+				{
+				document.getElementById(d[p1]).style.color="blue";
+				document.getElementById(d[p1-1]).style.color="blue";
+				document.getElementById(d[p1-2]).style.color="blue";
+				document.getElementById(d[p1-3]).style.color="blue";
+				document.getElementById("currentplayer").style.color="blue"
+				document.getElementById("currentplayer").innerHTML="Player 2 Wins!";
+				}
+			}
+		}
+	for (var i2 = 5; i2>2; i2--)
+	{
+		var e = rows[i2];
+		var e1 = rows[i2-1];
+		var e2 = rows[i2-2];
+		var e3 = rows[i2-3];
+		var r = rows2[i2];
+		var r1 = rows2[i2-1];
+		var r2 = rows2[i2-2];
+		var r3 = rows2[i2-3];
+		
+		for ( var j = 6; j>0; j--)
+			{
+			if (e[j] == e1[j-1] && e[j] == e2[j-2] && e[j] == e3[j-3] && e[j] == "O") 
+				{
+				document.getElementById(r[j]).style.color = "blue";
+				document.getElementById(r1[j-1]).style.color = "blue";
+				document.getElementById(r2[j-2]).style.color = "blue";
+				document.getElementById(r3[j-3]).style.color = "blue";
+				document.getElementById("currentplayer").style.color = "blue";
+				document.getElementById("currentplayer").innerHTML = "Player 2 Wins!";
+				}
+			if (e[j-3] == e1[j-2] && e[j-3] == e2[j-1] && e[j-3] == e3[j] && e3[j] == "O")
+				{
+				document.getElementById(r[j-3]).style.color = "blue";
+				document.getElementById(r1[j-2]).style.color = "blue";
+				document.getElementById(r2[j-1]).style.color = "blue";
+				document.getElementById(r3[j]).style.color = "blue";
+				document.getElementById("currentplayer").style.color = "blue";
+				document.getElementById("currentplayer").innerHTML = "Player 2 Wins!";
+				
+				}
+			}
+	}
+	
+		
+		
+			
+}
+function draw ()
+{
+	if(document.getElementById("oneone").innerHTML != "" && document.getElementById("onetwo").innerHTML != "" &&document.getElementById("onethree").innerHTML != "" && document.getElementById("onefour").innerHTML != "" && document.getElementById("onefive").innerHTML != "" && document.getElementById("onesix").innerHTML != "" && document.getElementById("oneseven").innerHTML != "" && document.getElementById("currentplayer") != "Player 1 Wins!" && document.getElementById("currentplayer").innerHTML != "Player 2 Wins!" && document.getElementById("counter").innerHTML != 0)
+		{
+			document.getElementById("currentplayer").innerHTML = "Game is a draw!";
+			document.getElementById("currentplayer").style.color = "blue";
+		}
+}
+
+
+function AI()//AI function, plays O in 1 player mode
+{
+	var row1 = [document.getElementById("oneone").innerHTML, document.getElementById("onetwo").innerHTML, document.getElementById("onethree").innerHTML, document.getElementById("onefour").innerHTML, document.getElementById("onefive").innerHTML, document.getElementById("onesix").innerHTML, document.getElementById("oneseven").innerHTML];
+	var row2 = [document.getElementById("twoone").innerHTML, document.getElementById("twotwo").innerHTML, document.getElementById("twothree").innerHTML, document.getElementById("twofour").innerHTML, document.getElementById("twofive").innerHTML, document.getElementById("twosix").innerHTML, document.getElementById("twoseven").innerHTML];
+	var row3 = [document.getElementById("threeone").innerHTML, document.getElementById("threetwo").innerHTML, document.getElementById("threethree").innerHTML, document.getElementById("threefour").innerHTML, document.getElementById("threefive").innerHTML, document.getElementById("threesix").innerHTML, document.getElementById("threeseven").innerHTML];
+	var row4 =[document.getElementById("fourone").innerHTML, document.getElementById("fourtwo").innerHTML, document.getElementById("fourthree").innerHTML, document.getElementById("fourfour").innerHTML, document.getElementById("fourfive").innerHTML, document.getElementById("foursix").innerHTML, document.getElementById("fourseven").innerHTML];
+	var row5 =[document.getElementById("fiveone").innerHTML, document.getElementById("fivetwo").innerHTML, document.getElementById("fivethree").innerHTML, document.getElementById("fivefour").innerHTML, document.getElementById("fivefive").innerHTML, document.getElementById("fivesix").innerHTML, document.getElementById("fiveseven").innerHTML];
+	var row6 =[document.getElementById("sixone").innerHTML, document.getElementById("sixtwo").innerHTML, document.getElementById("sixthree").innerHTML, document.getElementById("sixfour").innerHTML, document.getElementById("sixfive").innerHTML, document.getElementById("sixsix").innerHTML, document.getElementById("sixseven").innerHTML];
+	var col1 = [document.getElementById("oneone").innerHTML, document.getElementById("twoone").innerHTML, document.getElementById("threeone").innerHTML, document.getElementById("fourone").innerHTML, document.getElementById("fiveone").innerHTML, document.getElementById("sixone").innerHTML];
+	var col2 = [document.getElementById("onetwo").innerHTML, document.getElementById("twotwo").innerHTML, document.getElementById("threetwo").innerHTML, document.getElementById("fourtwo").innerHTML, document.getElementById("fivetwo").innerHTML, document.getElementById("sixtwo").innerHTML];
+	var col3 = [document.getElementById("onethree").innerHTML, document.getElementById("twothree").innerHTML, document.getElementById("threethree").innerHTML, document.getElementById("fourthree").innerHTML, document.getElementById("fivethree").innerHTML, document.getElementById("sixthree").innerHTML];
+	var col4 =[document.getElementById("onefour").innerHTML, document.getElementById("twofour").innerHTML, document.getElementById("threefour").innerHTML, document.getElementById("fourfour").innerHTML, document.getElementById("fivefour").innerHTML, document.getElementById("sixfour").innerHTML];
+	var col5 =[document.getElementById("onefive").innerHTML, document.getElementById("twofive").innerHTML, document.getElementById("threefive").innerHTML, document.getElementById("fourfive").innerHTML, document.getElementById("fivefive").innerHTML, document.getElementById("sixfive").innerHTML];
+	var col6 =[document.getElementById("onesix").innerHTML, document.getElementById("twosix").innerHTML, document.getElementById("threesix").innerHTML, document.getElementById("foursix").innerHTML, document.getElementById("fivesix").innerHTML, document.getElementById("sixsix").innerHTML];
+	var col7 =[document.getElementById("oneseven").innerHTML, document.getElementById("twoseven").innerHTML, document.getElementById("threeseven").innerHTML, document.getElementById("fourseven").innerHTML, document.getElementById("fiveseven").innerHTML, document.getElementById("sixseven").innerHTML];
+	var columns = [col1, col2, col3, col4, col5, col6, col7];
+	var Column1 = ["oneone","twoone","threeone","fourone","fiveone","sixone"];
+	var Column2 = ["onetwo","twotwo","threetwo","fourtwo","fivetwo","sixtwo"];
+	var Column3 = ["onethree","twothree","threethree","fourthree","fivethree","sixthree"];
+	var Column4 = ["onefour","twofour","threefour","fourfour","fivefour","sixfour"];
+	var Column5 = ["onefive","twofive","threefive","fourfive","fivefive","sixfive"];
+	var Column6 = ["onesix","twosix","threesix","foursix","fivesix","sixsix"];
+	var Column7 = ["oneseven","twoseven","threeseven","fourseven","fiveseven","sixseven"];
+	var rows = [row6, row5, row4, row3, row2, row1];
+	var rand = Math.floor((Math.random()*(7)));
+	var functions = [column1,column2,column3,column4,column5,column6,column7];
+	var Columns2 = [Column1, Column2, Column3, Column4, Column5, Column6, Column7];
+if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+{
+if (document.getElementById("playone").innerHTML < 1)
+{
+
+if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+{
+	for (var p = 0; p<7; p++)
+	{
+		var a = columns[p];
+		var b = functions[p];
+		
+	
+	
+		for (var i = 5; i >0;i--) // This for loop will automatically play O for the win if it is possible vertically, and block X from winning if they have 3 vertical in a row
+		{
+			if (a[i] == a[i-1] && a[i] == a[i-2] && a[i-2] == "O" && a[i-3] == "")
+				{
+				b();
+				break;
+				}
+			
+		}
+	}
+}
+if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+{
+
+	for (var p2 = 0; p2<6; p2++) //this counts each row, starting with p2=0 representing row 6 (bottom row)
+	{
+		var c = rows[p2];
+		var c1 = rows[p2-1];
+		var c2 = rows[p2-2];
+		var c3 = rows[p2-3];
+		var c4 = rows[p2-4];
+	
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 2") 
+	{
+		for (var f = 6; f > 0; f--)  //this checks each cell in the row p2, starting on the right
+			{						
+												
+			var d = functions[f];
+			var d1 = functions[f-1];
+			var d2 = functions[f-2];
+			var d3 = functions [f-3];
+			if (p2 < 1) // checks bottom row
+				{if (c[f] == c[f-1] && c[f] == c[f-2] && c[f-2] == "O" && c[f-3] == "") //checks if O has 3 in a row, plays left if empty
+					{
+					d3();
+					break;
+					}
+				if (c[f-3] == c[f-2] && c[f-3] == c[f-1] && c[f-2] == "O" && c[f] == "")//checks if O has 3 in a row, plays right if empty
+					{
+					d();
+					break;  
+					}
+				if (c[f] == c[f-1] && c[f] == c[f-3] && c[f-3] == "O" && c[f-2] == "")
+					{
+					d2();
+					break;
+					}
+				if (c[f] == c[f-2] && c[f] == c[f-3] && c[f-3] == "O" && c[f-1] == "") 
+					{
+					d1();
+					break;
+					}
+				}
+			else //checks every other row
+				{
+				if (c[f] == c[f-1] && c[f] == c[f-2] && c[f-2] == "O" && c[f-3] == "" && c1[f-3] != "")
+					{
+					d3();
+					break;
+					}
+				if (c[f-3] == c[f-2] && c[f-3] == c[f-1] && c[f-1] == "O" && c[f] == "" && c1[f] != "")
+					{
+					d();
+					break;
+					}
+				if (c[f] == c[f-1] && c[f] == c[f-3] && c[f-3] == "O" && c[f-2] == "" && c1[f-2] != "")
+					{
+					d2();
+					break;
+					}
+				if (c[f] == c[f-2] && c[f] == c[f-3] && c[f-3] == "O" && c[f-1] == "" && c1[f-1] != "")
+					{
+					d1();
+					break;
+					}
+				}
+			if (p2 == 3) // checks diagonals comprised of the bottom 4 rows only 
+				{
+				if (c[f] == c1[f-1] && c[f] == c2[f-2] && c2[f-2] == "O" && c3[f-3] == "")
+					{
+					d3();
+					break;
+					}
+				if (c3[f-3] == c2[f-2] && c3[f-3] == c1[f-1] && c1[f-1] == "O" && c[f] == "" && c1[f] != "")
+					{
+					d();  
+					break;
+					}
+				if (c3[f-3] == c2[f-2] && c3[f-3] == c[f] && c[f] == "O" && c1[f-1] == "" && c2[f-1] != "")
+					{
+					d1();
+					break;
+					}
+				if(c[f] == c1[f-1] && c[f] == c3[f-3] && c[f] == "O" && c2[f-2] == "" && c3[f-2] != "")
+					{
+					d2();
+					break;
+					}
+				if(c[f-3] == c1[f-2] && c[f-3] == c2[f-1] && c[f-3] == "O" && c3[f] == "")
+					{
+					d();
+					break;
+					}
+				if(c1[f-2] == c2[f-1] && c1[f-2] == c3[f] && c3[f] == "O" && c[f-3] == "" && c1[f-3] != "")
+					{
+					d3();
+					break;
+					}
+				if(c[f-3] == c1[f-2] && c[f-3] == c3[f] && c3[f] == "O" && c2[f-1] == "" && c3[f-1] != "")
+					{
+					d1();
+					break;
+					}
+				if(c[f-3] == c2[f-1] && c[f-3] == c3[f] && c3[f] == "O" && c1[f-2] == "" && c2[f-2] != "")
+					{
+					d2();
+					break;
+					}
+					
+				}
+			if (p2>3) // checks diagonals for any of the other rows 
+				{
+				if (c[f] == c1[f-1] && c[f] == c2[f-2] && c2[f-2] == "O" && c3[f-3] == "" && c4[f-3] != "")
+					{
+					d3();
+					break;
+					}
+				if (c3[f-3] == c2[f-2] && c3[f-3] == c1[f-1] && c1[f-1] == "O" && c[f] == "" && c1[f] !="")
+					{
+					d();
+					break;
+					}
+				if (c3[f-3] == c2[f-2] && c3[f-3] == c[f] && c[f] == "O" && c1[f-1] == "" && c2[f-1] !="")
+					{
+					d1();
+					break;
+					}
+				if (c3[f-3] == c1[f-1] && c3[f-3] == c[f] && c[f] == "O" && c2[f-2] == "" && c3[f-2] != "")
+					{
+					d2();
+					break;
+					}
+				if(c[f-3] == c1[f-2] && c[f-3] == c2[f-1] && c[f-3] == "O" && c3[f] == "" && c4[f] != "")
+					{
+					d();
+					break;
+					}
+				if(c1[f-2] == c2[f-1] && c1[f-2] == c3[f] && c3[f] == "O" && c[f-3] == "" && c1[f-3] != "")
+					{
+					d3();
+					break;
+					}
+				if(c[f-3] == c1[f-2] && c[f-3] == c3[f] && c3[f] == "O" && c2[f-1] == "" && c3[f-1] != "")
+					{
+					d1();
+					break;
+					}
+				if(c[f-3] == c2[f-1] && c[f-3] == c3[f] && c3[f] == "O" && c1[f-2] == "" && c2[f-2] != "")
+					{
+					d2();
+					break;
+					}
+				}
+				
+			}
+		}
+	}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		
+		for (var p1 = 0; p1<7; p1++) 
+			{
+				var a1 = columns[p1];
+				var b1 = functions[p1];
+				
+				for (var i1 = 5; i1 > 0; i1--)
+					{
+						if (a1[i1] == a1[i1-1] && a1[i1] == a1[i1-2] && a1[i1-2] == "X" && a1[i1-3] == "") //If O can't play for win, checks to see if there are 3 vertical X's in a row, then blocks. 
+						{
+						b1();
+						break;
+						}
+					}	
+			}
+		}
+	if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+	for (var w = 0; w<6; w++)
+			{
+			var y = rows[w];
+			var y1 = rows[w-1];
+			var y2 = rows[w-2];
+			var y3 = rows[w-3];
+			var y4 = rows[w-4];
+		for (var k = 6; k > 0; k--)  //this checks each cell in the row w, starting on the right
+			{
+			var s = functions[k];
+			var s1 = functions[k-1];
+			var s2 = functions[k-2];
+			var s3 = functions [k-3];
+		if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+			{
+			if (w < 1) // checks bottom row
+				{
+				if (y[k] == y[k-1] && y[k] == y[k-2] && y[k-2] == "X" && y[k-3] == "") //checks if X has 3 in a row, plays left if empty
+					{
+					s3();
+					break;
+					}
+				if (y[k-3] == y[k-2] && y[k-3] == y[k-1] && y[k-2] == "X" && y[k] == "")//checks if X has 3 in a row, plays right if empty
+					{
+					s();
+					break;  
+					}
+				if (y[k] == y[k-1] && y[k] == y[k-3] && y[k-3] == "X" && y[k-2] == "")
+					{
+					s2();
+					break;
+					}
+				if (y[k] == y[k-2] && y[k] == y[k-3] && y[k-3] == "X" && y[k-1] == "") 
+					{
+					s1();
+					break;
+					}
+				}
+			else //checks every other row
+				{
+				if (y[k] == y[k-1] && y[k] == y[k-2] && y[k-2] == "X" && y[k-3] == "" && y1[k-3] != "")
+					{
+					s3();
+					break;
+					}
+				if (y[k-3] == y[k-2] && y[k-3] == y[k-1] && y[k-1] == "X" && y[k] == "" && y1[k] != "")
+					{
+					s();
+					break;
+					}
+				if (y[k] == y[k-1] && y[k] == y[k-3] && y[k-3] == "X" && y[k-2] == "" && y1[k-2] != "")
+					{
+					s2();
+					break;
+					}
+				if (y[k] == y[k-2] && y[k] == y[k-3] && y[k-3] == "X" && y[k-1] == "" && y1[k-1] != "")
+					{
+					s1();
+					break;
+					}
+				}
+			if (w == 3) // checks diagonals comprised of the bottom 4 rows only 
+				{
+				if (y[k] == y1[k-1] && y[k] == y2[k-2] && y2[k-2] == "X" && y3[k-3] == "")
+					{
+					s3();
+					break;
+					}
+				if (y3[k-3] == y2[k-2] && y3[k-3] == y1[k-1] && y1[k-1] == "X" && y[k] == "" && y1[k] != "")
+					{
+					s();  
+					break;
+					}
+				if (y3[k-3] == y2[k-2] && y3[k-3] == y[k] && y[k] == "X" && y1[k-1] == "" && y2[k-1] != "")
+					{
+					s1();
+					break;
+					}
+				if(y[k] == y1[k-1] && y[k] == y3[k-3] && y[k] == "X" && y2[k-2] == "" && y3[k-2] != "")
+					{
+					s2();
+					break;
+					}
+				if(y[k-3] == y1[k-2] && y[k-3] == y2[k-1] && y[k-3] == "X" && y3[k] == "")
+					{
+					s();
+					break;
+					}
+				if(y1[k-2] == y2[k-1] && y1[k-2] == y3[k] && y3[k] == "X" && y[k-3] == "" && y1[k-3] != "")
+					{
+					s3();
+					break;
+					}
+				if(y[k-3] == y1[k-2] && y[k-3] == y3[k] && y3[k] == "X" && y2[k-1] == "" && y3[k-1] != "")
+					{
+					s1();
+					break;
+					}
+				if(y[k-3] == y2[k-1] && y[k-3] == y3[k] && y3[k] == "X" && y1[k-2] == "" && y2[k-2] != "")
+					{
+					s2();
+					break;
+					}
+					
+				}
+			if (w>3) // checks diagonals for any of the other rows 
+				{
+				if (y[k] == c1[k-1] && y[k] == y2[k-2] && y2[k-2] == "X" && y3[k-3] == "" && y4[k-3] != "")
+					{
+					s3();
+					break;
+					}
+				if (y3[k-3] == y2[k-2] && y3[k-3] == y1[k-1] && y1[k-1] == "X" && y[k] == "" && y1[k] != "")
+					{
+					s();  
+					break;
+					}
+				if (y3[k-3] == y2[k-2] && y3[k-3] == y[k] && y[k] == "X" && y1[k-1] == "" && y2[k-1] != "")
+					{
+					s1();
+					break;
+					}
+				if(y[k] == y1[k-1] && y[k] == y3[k-3] && y[k] == "X" && y2[k-2] == "" && y3[k-2] != "")
+					{
+					s2();
+					break;
+					}
+				if(y[k-3] == y1[k-2] && y[k-3] == y2[k-1] && y[k-3] == "X" && y3[k] == "")
+					{
+					s();
+					break;
+					}
+				if(y1[k-2] == y2[k-1] && y1[k-2] == y3[k] && y3[k] == "X" && y[k-3] == "" && y1[k-3] != "")
+					{
+					s3();
+					break;
+					}
+				if(y[k-3] == y1[k-2] && y[k-3] == y3[k] && y3[k] == "X" && y2[k-1] == "" && y3[k-1] != "")
+					{
+					s1();
+					break;
+					}
+				if(y[k-3] == y2[k-1] && y[k-3] == y3[k] && y3[k] == "X" && y1[k-2] == "" && y2[k-2] != "")
+					{
+					s2(); 
+					break;
+					}
+					
+				}
+				
+			}
+			}
+			}
+			
+		}	
+	}
+	}	
+	
+}
+
+
+
+		
+	
+if (document.getElementById("playone").innerHTML < 1)
+	{
+	if(document.getElementById("currentplayer").innerHTML == "Current Player: 2") 
+		{
+		for (g = 0; g<5; g++)
+			{
+			var z = rows[g];
+			for (n1 = 6; n1>0; n1--)
+				{
+				var x1 = functions[n1-3];
+				if (g < 1)
+					{
+					if (z[n1-1] == z[n1-2] && z[n1-3] == "" && z[n1-4] == "" & z[n1] == "" && z[n1-1] == "X")
+						{
+						x1();
+						break;
+						}
+					}
+				else 
+					{
+					var z1 = rows[g-1];
+					if (z[n1-1] == z[n1-2] && z[n1-3] == "" && z[n1-4] == "" & z[n1] == "" && z[n1-1] == "X" && z1[n1] != "" && z1[n1-3] != "" && z1[n1-4] != "")
+						{
+						x1();
+						break;
+						}
+					}
+				}
+			}
+		if (document.getElementById("currentplayer").innerHTML == "Current Player: 2")
+		{
+		functions[rand]();
+		}
+		}
+	}
+}
+			
+	</script>
+</head>
+<body>
+</div>
+	<div id="header">
+		    <p><b>Connect 4</b></p>
+	</div>
+	<div id="gametitle"><p>Connect Four</p></div>
+	<div id="connectfour">
+	        <span id="currentplayer">Current Player: 1</span>
+	</div>
+	<div id="table">
+	<table align="center">
+	<colgroup>
+    <col span="7" style="background-color:white">
+    </colgroup>
+			<tr></tr>
+				<td id="oneone" class="oneone" ><p></p></td>
+				<td id="onetwo" class="onetwo" ><p></p></td>
+				<td id="onethree" class="onethree" ><p></p></td>
+				<td id="onefour" class="onefour" ><p></p></td>
+				<td id="onefive" class="onefive" ><p></p></td>
+				<td id="onesix" class="onesix" ><p></p></td>
+				<td id="oneseven" class="oneseven" ><p></p></td>
+			<tr></tr>
+				<td id="twoone" class="twoone" ><p></p></td>
+				<td id="twotwo" class="twotwo" ><p></p></td>
+				<td id="twothree" class="twothree" ><p></p></td>
+				<td id="twofour" class="twofour" ><p></p></td>
+				<td id="twofive" class="twofive" ><p></p></td>
+				<td id="twosix" class="twosix" ><p></p></td>
+				<td id="twoseven" class="twoseven"><p></p></td>
+			<tr></tr>
+				<td id="threeone" class="threeone" ><p></p></td>
+				<td id="threetwo" class="threetwo" ><p></p></td>
+				<td id="threethree" class="threethree" ><p></p></td>
+				<td id="threefour" class="threefour" ><p></p></td>
+				<td id="threefive" class="threefive" ><p></p></td>
+				<td id="threesix" class="threesix" ><p></p></td>
+				<td id="threeseven" class="threeseven" ><p></p></td>
+			<tr></tr>
+				<td id="fourone" class="fourone" ><p></p></td>
+				<td id="fourtwo" class="fourtwo" ><p></p></td>
+				<td id="fourthree" class="fourthree" ><p></p></td>
+				<td id="fourfour" class="fourfour" ><p></p></td>
+				<td id="fourfive" class="fourfive" ><p></p></td>
+				<td id="foursix" class="foursix" ><p></p></td>
+				<td id="fourseven" class="fourseven" ><p></p></td>
+			<tr></tr>
+			    <td id="fiveone" class="fiveone" ><p></p></td>
+				<td id="fivetwo" class="fivetwo" ><p></p></td>
+				<td id="fivethree" class="fivethree" ><p></p></td>
+				<td id="fivefour" class="fivefour" ><p></p></td>
+				<td id="fivefive" class="fivefive" ><p></p></td>
+				<td id="fivesix" class="fivesix" ><p></p></td>
+				<td id="fiveseven" class="fiveseven" ><p></p></td>
+			<tr></tr>
+				<td id="sixone" class="sixone" ><p></p></td>
+				<td id="sixtwo" class="sixtwo" ><p></p></td>
+				<td id="sixthree" class="sixthree" ><p></p></td>
+				<td id="sixfour" class="sixfour" ><p></p></td>
+				<td id="sixfive" class="sixfive" ><p></p></td>
+				<td id="sixsix" class="sixsix" ><p></p></td>
+				<td id="sixseven" class="sixseven" ><p></p></td>
+				<tr>
+				   <td id="sevenone" class="sevenone"><p>
+				    <div id="clicker">
+				        <input type="button" value="play" onclick="column1();"> 
+				    </div>
+				   </p></td>
+				<td id="seventwo" class="seventwo"><p><div id="clicker">
+				        <input type="button" value="play"onclick="column2();"> 
+				    </div></p></td>
+				<td id="seventhree" class="seventhree"><p><div id="clicker">
+				        <input type="button" value="play" onclick="column3();"> 
+				    </div></p></td>
+				<td id="sevenfour" class="sevenfour"><p><div id="clicker">
+				        <input type="button" value="play" onclick="column4();"> 
+				    </div></p></td>
+				<td id="sevenfive" class="sevenfive"><p><div id="clicker">
+				        <input type="button" value="play" onclick="column5();"> 
+				    </div></p></td>
+				<td id="sixsix" class="sixsix"><p><div id="clicker">
+				        <input type="button" value="play" onclick="column6();"> 
+				    </div></p></td>
+				<td id="sevenseven" class="sevenseven"><p><div id="clicker">
+				        <input type="button" value="play" onclick="column7();"> 
+				    </div></p></td> 
+				</tr>
+	</table>
+	</div>
+	<div id="counter" hidden>
+	0
+	</div>
+	<input type="button" value="reset" onclick="reset();"/>
+	<div id="test">
+	</div>
+	<input type="button" id="oneplayer" value="One Player" onclick="oneplayer();"/>	
+	<input type="button" id="twoplayer" value="Two Player" onclick="twoplayer();"/>
+	<div id="playone" hidden> 2 </div>
+	
+</body>
+</html>
